@@ -1,0 +1,35 @@
+body{
+    background-image: url(siteBackground.jpg);
+    background-size:auto;
+}
+header {
+    height: 3.5rem;
+    width: auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: top;
+    position: sticky;
+    z-index: 10;
+}
+.logo{
+    border-radius: 100%;
+    border: 5px lightskyblue solid;
+    height: 3rem;
+    width: 3rem;
+    image-rendering: optimizeQuality;
+}
+.navContainer{
+    display: flex;    
+  }
+
+.navText{
+    color: black;
+    display: inline-block;
+    margin-right: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
