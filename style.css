@@ -1,7 +1,15 @@
+/* CSS for the 'html' element */
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS for the 'body' element */
 body {
   background-image: url(siteBackground.jpg);
   background-size: auto;
 }
+
+/* CSS for the 'header' element */
 header {
   height: 3.5rem;
   width: 100%;
@@ -11,13 +19,16 @@ header {
   position: fixed;
   z-index: 10;
   background-color: black;
-  margin-top: -8px;
-  margin-left: -8px;
-  padding-left: 10px;
+  margin: -8px 0 0 -8px;
+  padding: 0 0 0 10px;
 }
+
+/* CSS for the 'h1' element inside 'header' */
 header h1 {
   color: white;
 }
+
+/* CSS for the class 'logo' */
 .logo {
   border-radius: 100%;
   border: 5px lightskyblue solid;
@@ -25,11 +36,20 @@ header h1 {
   width: 3rem;
   image-rendering: optimizeQuality;
 }
+
+/* CSS for the 'navContainer' class */
 .navContainer {
   display: flex;
   padding-right: 20px;
 }
 
+/* Resetting link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* CSS for the 'navText' class */
 .navText {
   color: white;
   display: inline-block;
@@ -38,7 +58,14 @@ header h1 {
   font-weight: bold;
   margin-right: 10px;
   margin-left: 10px;
+  cursor: pointer;
 }
+
+.navText:hover {
+  color: lightskyblue;
+}
+
+/* CSS for the 'main' element */
 main {
   display: flex;
   justify-content: center;
@@ -46,27 +73,25 @@ main {
   flex-direction: column;
   transform: translate(0, 350px);
 }
+
+/* CSS for the 'h1' element inside 'main' */
 main h1 {
   width: auto;
 }
-#infoContainer {
+
+/* CSS for the 'infoContainer' ID */
+#home {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
-#profilePic {
-  width: 20em;
-  border: lightskyblue 5px;
-  border-radius: 100%;
-  width: 20em;
-  width: 20em;
-}
-
+/* CSS for 'p' elements */
 p {
   font-size: 1.5rem;
 }
 
+/* CSS for the 'sitelogo' ID */
 #sitelogo {
   height: 200px;
   width: auto;
@@ -74,45 +99,43 @@ p {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-@keyframes corner {
-  0% {
-    border-top-left-radius: 1% 50%;
-  }
-  12.5% {
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-  }
-  25% {
-    border-top-right-radius: 1% 50%;
-  }
-  25.001% {
-    border-top-right-radius: 50% 1%;
-  }
-  37.5% {
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-  }
-  50% {
-    border-bottom-right-radius: 50% 1%;
-  }
-  50.001% {
-    border-bottom-right-radius: 1% 50%;
-  }
-  62.5% {
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-  }
-  75% {
-    border-bottom-left-radius: 1% 50%;
-  }
-  75.001% {
-    border-bottom-left-radius: 50% 1%;
-  }
-  87.5% {
-    border-bottom-left-radius: 50%;
-    border-top-left-radius: 50%;
-  }
-  100% {
-    border-top-left-radius: 50% 1%;
-  }
+
+#about {
+  display: flex;
+  margin: 400px -10px 0 -8px;
+  padding: 10px;
+}
+
+#about * {
+  color: black;
+  background-color: lightskyblue;
+  text-align: center;
+}
+#about a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Resetting default margin and padding for the footer */
+footer {
+  margin: 0;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Centering text and adjusting font size for better readability */
+footer p {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Styling links within the footer */
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
