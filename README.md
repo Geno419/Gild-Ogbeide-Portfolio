@@ -7,7 +7,7 @@ Hey there! 👋 Welcome to my personal portfolio website! This is the source cod
 To kick things off, clone this repository:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/geno419/your-portfolio.git
 ```
 
 Open the `index.html` file in your web browser, and voila! You're ready to view your new portfolio.

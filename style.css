@@ -1,16 +1,27 @@
-/* CSS for the 'html' element */
 html {
   scroll-behavior: smooth;
 }
 
-/* CSS for the 'body' element */
+* {
+  /* border: 1px solid red; */
+  margin: 0;
+}
+
 body {
   background-image: url(siteBackground.jpg);
   background-size: auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "home"
+    "about"
+    "projects"
+    "footer";
+  /* grid-template-rows: 0fr 0.5fr 0fr 0fr 0fr; */
 }
 
-/* CSS for the 'header' element */
 header {
+  grid-area: header;
   height: 3.5rem;
   width: 100%;
   display: flex;
@@ -19,41 +30,26 @@ header {
   position: fixed;
   z-index: 10;
   background-color: black;
-  margin: -8px 0 0 -8px;
   padding: 0 0 0 10px;
 }
 
-/* CSS for the 'h1' element inside 'header' */
-header h1 {
+header * {
   color: white;
 }
 
-/* CSS for the class 'logo' */
-.logo {
-  border-radius: 100%;
-  border: 5px lightskyblue solid;
-  height: 3rem;
-  width: 3rem;
-  image-rendering: optimizeQuality;
-}
-
-/* CSS for the 'navContainer' class */
 .navContainer {
   display: flex;
   padding-right: 20px;
 }
 
-/* Resetting link styles */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* CSS for the 'navText' class */
 .navText {
   color: white;
   display: inline-block;
-  margin-right: 2rem;
   font-size: 1.3rem;
   font-weight: bold;
   margin-right: 10px;
@@ -65,33 +61,23 @@ a {
   color: lightskyblue;
 }
 
-/* CSS for the 'main' element */
-main {
+#home {
+  grid-area: home;
+  height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  transform: translate(0, 350px);
 }
 
-/* CSS for the 'h1' element inside 'main' */
-main h1 {
-  width: auto;
+.logo {
+  border-radius: 100%;
+  border: 5px lightskyblue solid;
+  height: 3rem;
+  width: 3rem;
+  image-rendering: optimizeQuality;
 }
 
-/* CSS for the 'infoContainer' ID */
-#home {
-  display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-}
-
-/* CSS for 'p' elements */
-p {
-  font-size: 1.5rem;
-}
-
-/* CSS for the 'sitelogo' ID */
 #sitelogo {
   height: 200px;
   width: auto;
@@ -101,36 +87,68 @@ p {
 }
 
 #about {
-  display: flex;
-  margin: 400px -10px 0 -8px;
-  padding: 10px;
+  grid-area: about;
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 3rem;
 }
 
 #about * {
   color: black;
-  background-color: lightskyblue;
-  text-align: center;
 }
+
 #about a {
   color: white;
   text-decoration: underline;
 }
 
-/* Resetting default margin and padding for the footer */
+#projects {
+  grid-area: projects;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  padding-top: 3rem;
+}
+
+.projectInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projectScreenshot {
+  justify-content: center;
+  display: flex;
+  background-color: black;
+}
+
+.projectScreenshot img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projectNotes {
+  justify-content: center;
+  text-align: left;
+}
+.projectNotes h2 {
+  text-align: center;
+}
 footer {
+  grid-area: footer;
   margin: 0;
   padding: 20px;
   background-color: #333;
   color: #fff;
 }
 
-/* Centering text and adjusting font size for better readability */
 footer p {
   text-align: center;
   font-size: 14px;
 }
 
-/* Styling links within the footer */
 footer a {
   color: #fff;
   text-decoration: none;
